@@ -204,7 +204,55 @@ function checkScroll(scrollOffset) {
 /* 2 */
 /***/ (function(module, exports) {
 
+// Sponsors Swiper Slider
+var testimonialsSwiper = new Swiper('.testimonials__container', {
+  // Optional parameters
+  grabCursor: true,
+  slidesPerView: 1,
+  spaceBetween: 50,
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2
+    },
+    992: {
+      slidesPerView: 2.5
+    }
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  // Pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  on: {
+    init: function init() {
+      checkArrow();
+    },
+    resize: function resize() {
+      checkArrow();
+    }
+  }
+});
 
+function checkArrow() {
+  var swiperPrev = document.querySelector('.swiper-button-prev');
+  var swiperNext = document.querySelector('.swiper-button-next');
+
+  if (window.innerWidth < 768) {
+    swiperPrev.style.visibility = 'hidden';
+    swiperNext.style.visibility = 'hidden';
+  } else {
+    swiperPrev.style.visibility = 'visible';
+    swiperNext.style.visibility = 'visible';
+  }
+}
 
 /***/ })
 /******/ ]);
