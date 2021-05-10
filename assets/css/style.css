@@ -1091,12 +1091,20 @@ footer {
   border-radius: 15px;
   opacity: 1;
   background-color: #DDE0E4;
-  transition: width .5s ease-in-out;
   margin: 0 15px 0 0 !important;
 }
 
 .testimonials__container .swiper-pagination-bullet:last-child {
   margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .testimonials__container .swiper-pagination-bullets {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
 }
 
 .testimonials__container .swiper-pagination-bullet-active {
