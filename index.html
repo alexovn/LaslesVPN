@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaslesVPN</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 <body>
@@ -13,9 +13,9 @@
         <header class="header lock-padding" id="header">
     <div class="container">
         <div class="header__inner">
-            <div class="header__logo">
-                <picture><source srcset="./assets/images/logo/lv-logo.svg" type="image/webp"><img class="header__logo-img" src="./assets/images/logo/lv-logo.svg" alt="LaslesVPN"></picture>
-                <span class="header__logo-text">Lasles<b>VPN</b></span>
+            <div class="header__logo main-logo">
+                <picture><source srcset="./assets/images/logo/lv-logo.svg" type="image/webp"><img class="header__logo-img main-logo__img" src="./assets/images/logo/lv-logo.svg" alt="LaslesVPN"></picture>
+                <span class="header__logo-text main-logo__text">Lasles<b>VPN</b></span>
             </div>
             <nav class="header__menu" id="header__menu">
                 <ul class="menu">
@@ -73,7 +73,7 @@
                         Provide a network for all your needs with ease and fun using <span>LaslesVPN</span> discover interesting features from us.
                     </p>
                 </div>
-                <button class="intro-btn">Get Started</button>
+                <button class="intro-btn main-btn">Get Started</button>
             </div>
             <div class="intro__img-wrap">
                 <picture><source srcset="./assets/images/intro/img-1.svg" type="image/webp"><img class="intro__img" src="./assets/images/intro/img-1.svg" alt="intro image"></picture>
@@ -392,17 +392,13 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-pagination">
-                <div class="swiper-pagination-bullet"></div>
-                <div class="swiper-pagination-bullet"></div>
-                <div class="swiper-pagination-bullet"></div>
-            </div>
-            <div class="swiper-button-prev">
+            <div class="swiper-pagination testimonials-pagination"></div>
+            <div class="swiper-button-prev testimonials-arrows">
                 <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18.75 8.00291H3.925L8.4625 2.55291C8.67467 2.29764 8.77675 1.96854 8.74628 1.638C8.7158 1.30747 8.55527 1.00258 8.3 0.790408C8.04473 0.578235 7.71563 0.476157 7.3851 0.506632C7.05456 0.537107 6.74967 0.697637 6.5375 0.952908L0.2875 8.45291C0.245451 8.51256 0.207849 8.57523 0.175 8.64041C0.175 8.70291 0.175 8.74041 0.0875002 8.80291C0.0308421 8.94623 0.0011764 9.0988 0 9.25291C0.0011764 9.40702 0.0308421 9.55958 0.0875002 9.70291C0.0875002 9.76541 0.0874998 9.80291 0.175 9.86541C0.207849 9.93058 0.245451 9.99325 0.2875 10.0529L6.5375 17.5529C6.65503 17.694 6.8022 17.8075 6.96856 17.8853C7.13491 17.963 7.31636 18.0032 7.5 18.0029C7.79207 18.0035 8.07511 17.9018 8.3 17.7154C8.42657 17.6105 8.5312 17.4816 8.60789 17.3362C8.68458 17.1907 8.73183 17.0316 8.74692 16.8679C8.76202 16.7042 8.74466 16.5391 8.69586 16.3821C8.64705 16.2251 8.56775 16.0792 8.4625 15.9529L3.925 10.5029H18.75C19.0815 10.5029 19.3995 10.3712 19.6339 10.1368C19.8683 9.90237 20 9.58443 20 9.25291C20 8.92139 19.8683 8.60345 19.6339 8.36902C19.3995 8.1346 19.0815 8.00291 18.75 8.00291Z"/>
                 </svg>
             </div>
-            <div class="swiper-button-next">
+            <div class="swiper-button-next testimonials-arrows">
                 <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.25 8.00291H16.075L11.5375 2.55291C11.3253 2.29764 11.2232 1.96854 11.2537 1.638C11.2842 1.30747 11.4447 1.00258 11.7 0.790408C11.9553 0.578235 12.2844 0.476157 12.6149 0.506632C12.9454 0.537107 13.2503 0.697637 13.4625 0.952908L19.7125 8.45291C19.7545 8.51256 19.7922 8.57523 19.825 8.64041C19.825 8.70291 19.825 8.74041 19.9125 8.80291C19.9692 8.94623 19.9988 9.0988 20 9.25291C19.9988 9.40702 19.9692 9.55958 19.9125 9.70291C19.9125 9.76541 19.9125 9.80291 19.825 9.86541C19.7922 9.93058 19.7545 9.99325 19.7125 10.0529L13.4625 17.5529C13.345 17.694 13.1978 17.8075 13.0314 17.8853C12.8651 17.963 12.6836 18.0032 12.5 18.0029C12.2079 18.0035 11.9249 17.9018 11.7 17.7154C11.5734 17.6105 11.4688 17.4816 11.3921 17.3362C11.3154 17.1907 11.2682 17.0316 11.2531 16.8679C11.238 16.7042 11.2553 16.5391 11.3041 16.3821C11.3529 16.2251 11.4322 16.0792 11.5375 15.9529L16.075 10.5029H1.25C0.91848 10.5029 0.600536 10.3712 0.366116 10.1368C0.131695 9.90237 0 9.58443 0 9.25291C0 8.92139 0.131695 8.60345 0.366116 8.36902C0.600536 8.1346 0.91848 8.00291 1.25 8.00291Z"/>
                 </svg>
@@ -413,8 +409,130 @@
 </section>
         </main>
         
+        <footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__info">
+                <a class="footer__logo main-logo">
+                    <picture><source srcset="./assets/images/logo/lv-logo.svg" type="image/webp"><img class="footer__logo-img main-logo__img" src="./assets/images/logo/lv-logo.svg" alt="LaslesVPN logo"></picture>
+                    <span class="footer__logo-text main-logo__text">Lasles<b>VPN</b></span>
+                </a>
+                <div class="footer__desc">
+                    <p>
+                        <b>LaslesVPN</b> is a private virtual network that has unique features and has high security.
+                    </p>
+                </div>
+                <ul class="footer__social">
+                    <li class="footer__social-item">
+                        <a href="#!" class="footer__social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="#!" class="footer__social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="#!" class="footer__social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer__copyright">&#169 2020Lasles<b>VPN</b></div>
+            </div>
+            <div class="footer__menu">
+                <div class="footer__item">
+                    <h3 class="footer__item-header">Product</h3>
+                    <ul class="footer__item-list">
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                Download 
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                Pricing
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                Locations
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                Server
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                Countries
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <h3 class="footer__item-header">Engage</h3>
+                    <ul class="footer__item-list">
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                LaslesVPN ? 
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                Tutorials
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                Terms of Service
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <h3 class="footer__item-header">Earn Money</h3>
+                    <ul class="footer__item-list">
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                Affiliate
+                            </a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#!" class="footer__list-link">
+                                Become Partner
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</footer>
+    </div>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/app.min.js"></script>
 </body>
 </html>

@@ -204,7 +204,15 @@ function checkScroll(scrollOffset) {
 /* 2 */
 /***/ (function(module, exports) {
 
-// Sponsors Swiper Slider
+//============================Sponsors Swiper Slider===============================
+//==========================[import & configure modules]===================================
+// // import Swiper JS
+// import Swiper from 'swiper';
+// // core version + navigation, pagination modules:
+// import SwiperCore, { Navigation, Pagination } from 'swiper/core';
+// // configure Swiper to use modules
+// SwiperCore.use([Navigation, Pagination]);
+//=========================[import & configure modules]=====================================
 var testimonialsSwiper = new Swiper('.testimonials__container', {
   // Optional parameters
   grabCursor: true,
