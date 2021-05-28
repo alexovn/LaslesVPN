@@ -9171,6 +9171,7 @@ footer {
   left: 0;
   width: 100%;
   background-color: #fff;
+  transition: top 0.5s ease 0s;
 }
 
 .header__inner {
@@ -9243,6 +9244,7 @@ footer {
 .header--fixed {
   top: 0;
   box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.25);
+  transition: top 0.5s ease 0s;
 }
 
 .header--fixed .header__inner {
