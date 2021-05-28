@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaslesVPN</title>
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/vendor.min.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 <body>
     <div class="wrapper">
-        <header class="header lock-padding" id="header">
+        <header class="header" id="header">
     <div class="container">
         <div class="header__inner">
             <div class="header__logo main-logo">
@@ -46,7 +46,7 @@
                     </li>
                 </ul>
                 <div class="header__menu-btns">
-                    <button class="header__menu-btn sign-in-btn">Sign In</button>
+                    <button  data-hystmodal="#myModal" class="header__menu-btn sign-in-btn">Sign In</button>
                     <a class="header__menu-btn sign-up-btn" href="#!">Sign Up</a>
                 </div>
             </nav>
@@ -54,7 +54,7 @@
                 <span class="nav-toggle__icon"></span>
             </button>
             <div class="header__btns">
-                <button class="header-btn sign-in-btn">Sign In</button>
+                <button data-hystmodal="#myModal" class="header-btn sign-in-btn popup-link">Sign In</button>
                 <a class="header-btn sign-up-btn" href="#!">Sign Up</a>
             </div>
         </div>
@@ -441,18 +441,18 @@
                     </p>
                 </div>
                 <ul class="footer__social">
-                    <li class="footer__social-item">
-                        <a href="#!" class="footer__social-link">
+                    <li class="footer__social-item social-item">
+                        <a href="#!" class="footer__social-link social-link">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </li>
-                    <li class="footer__social-item">
-                        <a href="#!" class="footer__social-link">
+                    <li class="footer__social-item social-item">
+                        <a href="#!" class="footer__social-link social-link">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </li>
-                    <li class="footer__social-item">
-                        <a href="#!" class="footer__social-link">
+                    <li class="footer__social-item social-item">
+                        <a href="#!" class="footer__social-link social-link">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </li>
@@ -550,7 +550,98 @@
     </div>
 </footer>
     </div>
-    <script src="./assets/js/swiper-bundle.min.js"></script>
-    <script src="./assets/js/app.min.js"></script>
+    <!-- <div class="modal" id="sign-in-modal">
+    <div class="modal__body">
+        <div class="modal__content">
+            <button class="modal__close close-modal">
+                <span class="modal__close-icon"></span>
+            </button>
+            <form action="#" class="sign-in-form">
+                <h1 class="sign-in-form__title">
+                    Sign In
+                </h1>
+                <ul class="sign-in-form__social">
+                    <li class="sign-in-form__social-item social-item">
+                        <a href="#!" class="sign-in-form__social-link social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="sign-in-form__social-item social-item">
+                        <a href="#!" class="sign-in-form__social-link social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="sign-in-form__social-item social-item">
+                        <a href="#!" class="sign-in-form__social-link social-link">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="sign-in-form__text">
+                    <p>or use your account</p>
+                </div>
+                <div class="sign-in-form__field">
+                    <input autocomplete="on" type="email" placeholder="Email" class="sign-in-form__email sign-in-form__input">
+                    <input autocomplete="on" type="password" placeholder="Password" class="sign-in-form__password sign-in-form__input">
+                </div>
+                <a href="#!" class="sign-in-form__forgot-password-link">
+                    Forgot your password?
+                </a>
+                <button class="sign-in-form__btn main-btn">
+                    Sign In
+                </button>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="hystmodal" id="myModal" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window sign-in-modal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close sign-in-modal__close">
+                    <span class="sign-in-modal__close-icon"></span>
+                Закрыть
+            </button>
+            <form action="#" class="sign-in-form">
+                <h1 class="sign-in-form__title">
+                    Sign In
+                </h1>
+                <ul class="sign-in-form__social">
+                    <li class="sign-in-form__social-item social-item">
+                        <a href="#!" class="sign-in-form__social-link social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="sign-in-form__social-item social-item">
+                        <a href="#!" class="sign-in-form__social-link social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="sign-in-form__social-item social-item">
+                        <a href="#!" class="sign-in-form__social-link social-link">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="sign-in-form__text">
+                    <p>or use your account</p>
+                </div>
+                <div class="sign-in-form__field">
+                    <input autocomplete="on" type="email" placeholder="Email" class="sign-in-form__email sign-in-form__input">
+                    <input autocomplete="on" type="password" placeholder="Password" class="sign-in-form__password sign-in-form__input">
+                </div>
+                <a href="#!" class="sign-in-form__forgot-password-link">
+                    Forgot your password?
+                </a>
+                <button class="sign-in-form__btn main-btn">
+                    Sign In
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+    <script src="./assets/js/vendor.bundle.min.js"></script>
+    <script src="./assets/js/main.bundle.min.js"></script>
 </body>
 </html>
