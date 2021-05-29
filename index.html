@@ -54,7 +54,7 @@
                 <span class="nav-toggle__icon"></span>
             </button>
             <div class="header__btns">
-                <button data-hystmodal="#sign-in-modal" class="header-btn sign-in-btn popup-link">Sign In</button>
+                <button data-hystmodal="#sign-in-modal" class="header-btn sign-in-btn">Sign In</button>
                 <a class="header-btn sign-up-btn" href="#!">Sign Up</a>
             </div>
         </div>
@@ -421,7 +421,7 @@
                     </p>
                 </div>
             </div>
-            <button class="subscribe-btn main-btn">
+            <button data-hystmodal="#subscribe-modal" class="subscribe-btn main-btn">
                 Subscribe Now
             </button>
         </div>
@@ -553,8 +553,8 @@
     <div class="hystmodal" id="sign-in-modal" aria-hidden="true">
     <div class="hystmodal__wrap">
         <div class="hystmodal__window sign-in-modal__window" role="dialog" aria-modal="true">
-            <button data-hystclose class="hystmodal__close sign-in-modal__close">
-                    <span class="sign-in-modal__close-icon"></span>
+            <button data-hystclose class="hystmodal__close sign-in-modal__close modal__close">
+                    <span class="sign-in-modal__close-icon modal__close-icon"></span>
                 Закрыть
             </button>
             <form action="#" class="sign-in-form">
@@ -594,6 +594,35 @@
             </form>
         </div>
     </div>
+</div>
+
+<div class="hystmodal" id="subscribe-modal" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window subscribe-modal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close subscribe-modal__close modal__close">
+                <span class="subscribe-modal__close-icon modal__close-icon"></span>
+                    Закрыть
+            </button>
+            <form action="#" class="subscribe-form">
+                <h1 class="subscribe-form__title">
+                    Subscribe Now
+                </h1>
+                <div class="subscribe-form__text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In, deleniti?
+                    </p>
+                </div>
+                <div class="subscribe-form__area">
+                    <div class="subscribe-form__field">
+                        <input autocomplete="on" type="email" placeholder="Email" class="subscribe-form__email subscribe-form__input">
+                    </div>
+                    <button class="subscribe-form__btn main-btn">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div> 
 </div>
     <script src="./assets/js/vendor.bundle.min.js"></script>
     <script src="./assets/js/main.bundle.min.js"></script>

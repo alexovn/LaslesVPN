@@ -9203,10 +9203,14 @@ footer {
     background-color: #F53855;
     transform-origin: 0% 0%;
     transform: translate3d(100%, 0, 0);
-    transition: transform 0.45s cubic-bezier(0.77, 0.2, 0.05, 1);
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.45s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
   .header__menu.active {
+    visibility: visible;
     transform: translate3d(0, 0, 0);
+    pointer-events: auto;
   }
 }
 
@@ -9313,6 +9317,10 @@ footer {
 
 .sign-in-btn {
   background-color: transparent;
+}
+
+.sign-in-btn:hover {
+  color: #F53855;
 }
 
 @media (max-width: 992px) {
@@ -10213,46 +10221,72 @@ footer {
   }
 }
 
-.modal {
-  z-index: 1000;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  top: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  overflow-y: auto;
-  overflow-x: hidden;
+.sign-in-form {
+  text-align: center;
 }
 
-.modal.active {
-  opacity: 1;
-  visibility: visible;
+.sign-in-form__title {
+  margin: 0px 0px 20px 0px;
+  font-size: 30px;
+  color: #0B132A;
+  font-weight: 700;
 }
 
-.modal__body {
-  min-height: 100%;
+.sign-in-form__social {
+  margin: 0px 0px 20px 0px;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  padding: 30px 10px;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
-.modal__content {
-  position: relative;
-  background-color: #fff;
-  color: #000;
-  max-width: 800px;
+.sign-in-form__text {
+  margin: 0px 0px 20px 0px;
+}
+
+.sign-in-form__field {
+  margin: 0px 0px 20px 0px;
+}
+
+.sign-in-form__input {
+  background-color: #eee;
+  width: 100%;
+  padding: 12px 15px;
+  margin: 0px 0px 10px 0px;
+  border-radius: 20px;
+}
+
+.sign-in-form__input:last-child {
+  margin: 0;
+}
+
+.sign-in-form__forgot-password-link {
+  margin: 0px 0px 20px 0px;
+  color: inherit;
+}
+
+.sign-in-form__btn {
+  border-radius: 50px;
+  font-size: 16px;
+}
+
+.sign-in-form__btn::before {
+  box-shadow: none;
+}
+
+.sign-in-form__btn:hover {
+  background-color: #ce2e46;
+}
+
+.sign-in-modal__window.hystmodal__window,
+.subscribe-modal__window.hystmodal__window {
   padding: 30px;
   border-radius: 10px;
 }
 
-.modal__close {
+.modal__close.hystmodal__close {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -10260,7 +10294,7 @@ footer {
   height: 40px;
   border-radius: 50%;
   background-color: #F53855;
-  cursor: pointer;
+  background-image: none;
 }
 
 .modal__close-icon {
@@ -10298,112 +10332,48 @@ footer {
   transform: rotate(-45deg);
 }
 
-.sign-in-form {
+.subscribe-modal__close.hystmodal__close {
+  right: 10px;
+  top: -16px;
+}
+
+.subscribe-form {
   text-align: center;
 }
 
-.sign-in-form__title {
+.subscribe-form__title {
   margin: 0px 0px 20px 0px;
   font-size: 30px;
+  color: #0B132A;
   font-weight: 700;
 }
 
-.sign-in-form__social {
-  margin: 0px 0px 20px 0px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-}
-
-.sign-in-form__text {
+.subscribe-form__text {
   margin: 0px 0px 20px 0px;
 }
 
-.sign-in-form__field {
+.subscribe-form__field {
   margin: 0px 0px 20px 0px;
 }
 
-.sign-in-form__input {
+.subscribe-form__input {
   background-color: #eee;
   width: 100%;
   padding: 12px 15px;
-  margin: 0px 0px 10px 0px;
   border-radius: 20px;
 }
 
-.sign-in-form__input:last-child {
-  margin: 0;
-}
-
-.sign-in-form__forgot-password-link {
-  margin: 0px 0px 20px 0px;
-}
-
-.sign-in-form__btn {
+.subscribe-form__btn {
   border-radius: 50px;
   font-size: 16px;
 }
 
-.sign-in-form__btn::before {
+.subscribe-form__btn::before {
   box-shadow: none;
 }
 
-.sign-in-form__btn:hover {
+.subscribe-form__btn:hover {
   background-color: #ce2e46;
-}
-
-.sign-in-modal__window.hystmodal__window {
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.sign-in-modal__close.hystmodal__close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #F53855;
-  background-image: none;
-}
-
-.sign-in-modal__close-icon {
-  display: inline-block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  transform: translateX(-50%) translateY(-50%);
-  width: 18px;
-  height: 2px;
-  background-color: rgba(255, 255, 255, 0);
-  border-radius: 1px;
-}
-
-.sign-in-modal__close-icon::before, .sign-in-modal__close-icon::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  border-radius: 1px;
-  background-color: inherit;
-  background-color: white;
-}
-
-.sign-in-modal__close-icon:before {
-  bottom: 0;
-  transform: rotate(45deg);
-}
-
-.sign-in-modal__close-icon:after {
-  top: 0;
-  transform: rotate(-45deg);
 }
 
 .footer {
